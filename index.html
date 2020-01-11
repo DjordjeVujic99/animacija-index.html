@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="sr">
+<meta charset="UTF-8">
+<head>
+<title>animation</title>
+<style>
+body{
+    margin: 0;
+    padding:0;
+    background:#050210 ;
+}
+.krug {
+    position: relative;
+    top:100px;
+    left: 40%;
+    padding: 0;
+    background: #ffffff;
+    height: 60vh;
+    width: 60vh;
+    border-radius:50%;
+    background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+    animation: animacija 0.5s linear infinite;
+    
+    
+}
+.krug::before {
+    content: '';
+    position: absolute;
+    margin-top: 0%;
+    margin-left: 0%;
+    padding: 0;
+    height: 60vh;
+    width: 60vh;
+    border-radius: 50%;
+    background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+    filter: blur(30px);
+}
+.prvi{
+    content: "";
+    margin:0 auto;
+    position:absolute;
+    top:20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    border-radius: 200px;
+    background:#050210;
+   
+}
+@keyframes animacija {
+    0%{
+        transform: rotate(0deg);
+        
+    }
+    100%{
+        transform: rotate(360deg);
+		}
+		}
+		@keyframes animacija1{
+    0%{
+        transform: scale(0);
+        filter: blur(5px);
+		
+    }
+   
+    100%{
+        transform: scale(1);
+        filter: blur(5px);
+		filter:brightness(0.8);
+    }
+}
+        
+
+.drugi{
+    content: '';
+    margin: 0 auto;
+    position: absolute;
+    top:10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border-radius: 100%;
+    background: #0e062d;
+    animation: animacija1 1.5s linear infinite;
+    
+}
+
+
+</style>
+</head>
+<body>
+    <div class="krug"> 
+        <div class="prvi">
+            <div class="drugi">
+                
+            </div">
+        </div>
+    </div>
+</body>
+</html>
+
